@@ -16,32 +16,33 @@
         <h1>
             Daily Diary
         </h1>
-        <span>keep your jurnals organized :)</span><br/>
-        <br/>
+        <span>keep your jurnals organized :)</span><br />
+        <br />
         <form action="{% url 'home' %}" method="post">
-            <textarea type="text" name="diary_text" id="Dtext" class="input-group input-group-lg" style="height: 300px;">
+            <textarea type="text" name="diary_text" id="Dtext" class="input-group input-group-lg"
+                style="height: 300px;">
 
         </textarea>
             <br />
             <input class="btn btn-primary" type="submit" value="add"></input>
         </form>
-        <br/>
+        <br />
         <section>
             {% for diy in diary %}
             <div class="card">
-                <div class="card-body"> 
+                <div class="card-body">
                     {{diy.diary_text}}
                 </div>
             </div>
-            <br/>
+            <br />
             {% endfor %}
         </section>
         <br />
 
         <!-- Button trigger modal -->
-        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" href="#exampleModal">
+        <!-- <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" href="#exampleModal">
             Launch demo modal
-        </a>
+        </a> -->
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
